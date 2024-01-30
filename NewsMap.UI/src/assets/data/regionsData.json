@@ -1,0 +1,129 @@
+{
+  "UA-05": {
+    "grp": "20253",
+    "name": "Vinnyts'ka Oblast'",
+    "name_ru": "Винницкая область"
+  },
+  "UA-07": {
+    "grp": "19249",
+    "name": "Volyns'ka Oblast'",
+    "name_ru": "Волынская область"
+  },
+  "UA-09": {
+    "grp": "25950",
+    "name": "Luhans'ka Oblast'",
+    "name_ru": "Луганская область"
+  },
+  "UA-12": {
+    "grp": "44650",
+    "name": "Dnipropetrovs'ka Oblast'",
+    "name_ru": "Днепропетровская область"
+  },
+  "UA-14": {
+    "grp": "38907",
+    "name": "Donets'ka Oblast'",
+    "name_ru": "Донецкая область"
+  },
+  "UA-18": {
+    "grp": "19551",
+    "name": "Zhytomyrs'ka Oblast'",
+    "name_ru": "Житомирская область"
+  },
+  "UA-21": {
+    "grp": "17088",
+    "name": "Zakarpats'ka Oblast'",
+    "name_ru": "Закарпатская область"
+  },
+  "UA-23": {
+    "grp": "30656",
+    "name": "Zaporiz'ka Oblast'",
+    "name_ru": "Запорожская область"
+  },
+  "UA-26": {
+    "grp": "23379",
+    "name": "Ivano-Frankivs'ka Oblast'",
+    "name_ru": "Ивано-Франковская область"
+  },
+  "UA-30": { "grp": "97429", "name": "Kyïv", "name_ru": "Киев" },
+  "UA-32": {
+    "grp": "40483",
+    "name": "Kyïvs'ka Oblast'",
+    "name_ru": "Киевская область"
+  },
+  "UA-35": {
+    "grp": "22082",
+    "name": "Kirovohrads'ka Oblast'",
+    "name_ru": "Кировоградская область"
+  },
+  "UA-40": { "grp": "25872", "name": "Sevastopol'", "name_ru": "Севастополь" },
+  "UA-43": {
+    "grp": "22675",
+    "name": "Avtonomna Respublika Krym",
+    "name_ru": "Автономная Республика Крым"
+  },
+  "UA-46": {
+    "grp": "24387",
+    "name": "L'vivs'ka Oblast'",
+    "name_ru": "Львовская область"
+  },
+  "UA-48": {
+    "grp": "24838",
+    "name": "Mykolaïvs'ka Oblast'",
+    "name_ru": "Николаевская область"
+  },
+  "UA-51": {
+    "grp": "27070",
+    "name": "Odes'ka Oblast'",
+    "name_ru": "Одесская область"
+  },
+  "UA-53": {
+    "grp": "38424",
+    "name": "Poltavs'ka Oblast'",
+    "name_ru": "Полтавская область"
+  },
+  "UA-56": {
+    "grp": "18860",
+    "name": "Rivnens'ka Oblast'",
+    "name_ru": "Ровненская область"
+  },
+  "UA-59": {
+    "grp": "21722",
+    "name": "Sums'ka Oblast'",
+    "name_ru": "Сумская область"
+  },
+  "UA-61": {
+    "grp": "16644",
+    "name": "Ternopil's'ka Oblast'",
+    "name_ru": "Тернопольская область"
+  },
+  "UA-63": {
+    "grp": "29972",
+    "name": "Kharkivs'ka Oblast'",
+    "name_ru": "Харьковская область"
+  },
+  "UA-65": {
+    "grp": "17910",
+    "name": "Khersons'ka Oblast'",
+    "name_ru": "Херсонская область"
+  },
+  "UA-68": {
+    "grp": "19920",
+    "name": "Khmel'nyts'ka Oblast'",
+    "name_ru": "Хмельницкая область"
+  },
+  "UA-71": {
+    "grp": "24558",
+    "name": "Cherkas'ka Oblast'",
+    "name_ru": "Черкасская область"
+  },
+  "UA-74": {
+    "grp": "22096",
+    "name": "Chernihivs'ka Oblast'",
+    "name_ru": "Черниговская область"
+  },
+  "UA-77": {
+    "grp": "14529",
+    "name": "Chernivets'ka Oblast'",
+    "name_ru": "Черновицкая область"
+  }
+}
