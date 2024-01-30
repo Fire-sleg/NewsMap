@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NewsMapService } from './services/news-map.service';
 import { NewsMap } from './models/NewsMap';
+import * as Highcharts from 'highcharts';
+import HC_map from 'highcharts/modules/map';
 
 @Component({
   selector: 'app-root',

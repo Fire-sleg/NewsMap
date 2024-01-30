@@ -1,0 +1,76 @@
+/* .map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-container {
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arimo, Arial,
+    sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.42857;
+  width: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 95%;
+}
+
+.info-header h4 {
+  background: #7af;
+  color: #fff;
+  margin: 0;
+  padding: 0.5em 1em;
+}
+
+.info-header h4:first-child {
+  padding-top: 1em;
+}
+
+.info-header h4:last-child {
+  padding-bottom: 1em;
+}
+
+.info-region {
+  background: #eee;
+  padding: 0.5em 1em;
+}
+
+.info-region:after,
+.info-header:before {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.info .region-name {
+  float: left;
+}
+
+.info .region-grp {
+  font-size: 2em;
+  float: right;
+}

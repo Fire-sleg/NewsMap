@@ -20,7 +20,7 @@ export class NewsMapService {
 
   public getNewsMap(): Observable<NewsMap> {
     return this.http.get<NewsMap>(
-      this.apiUrl /* `${environment.apiUrl}/${this.url}` */
+      /* this.apiUrl */ `${environment.apiUrl}/${this.url}`
     );
   }
 }
