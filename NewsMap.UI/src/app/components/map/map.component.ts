@@ -66,13 +66,8 @@ export class MapComponent implements AfterViewInit {
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import * as topojson from 'topojson';
-import {
-  Router,
-  RouterLink,
-  RouterLinkActive,
-  RouterOutlet,
-} from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-map',
@@ -85,8 +80,9 @@ export class MapComponent implements OnInit {
   regionsCoordinatesUri = '../../../assets/data/regionsCoordinates.topojson';
   initialCoordinates = [48.47, 31.39];
   initialScale = 6;
+  regionName = '';
 
-  constructor(private router: Router) {}
+  constructor(private location: Location, private router: Router) {}
 
   ngOnInit(): void {
     this.loadJSON(this.regionsDataUri, (s: string) => {
@@ -120,6 +116,7 @@ export class MapComponent implements OnInit {
 
   initializeMap(): void {
     this.map = L.map('map').setView([49.0275, 31.4828], 6);
+    this.map.on('click', this.onMapClick.bind(this));
   }
 
   addTileLayer(): void {
@@ -153,7 +150,7 @@ export class MapComponent implements OnInit {
 
     const highlightFeature = (e: any) => {
       const layer = e.target;
-      const iso = e.target.feature.properties.iso_3166_2;
+      //const iso = e.target.feature.properties.iso_3166_2;
 
       layer.setStyle({
         weight: 2,
@@ -173,14 +170,15 @@ export class MapComponent implements OnInit {
       svgText.setAttribute('font-family', 'Arial'); // Задайте шрифт
       svgText.setAttribute('font-size', '16'); // Задайте розмір шрифту
       svgText.setAttribute('fill', '#000'); // Задайте колір тексту
-      svgText.textContent = regionsData[iso].name;
+      svgText.textContent =
+        regionsData[layer.feature.properties.iso_3166_2].name;
 
       // Отримайте ваш SVG-елемент (якщо у вас є id для SVG-контейнера, використайте document.getElementById)
       const svgContainer = document.querySelector('svg');
 
       // Додайте текстовий елемент до SVG-контейнера
       svgContainer?.appendChild(svgText);
-      this.map.on('click', this.onMapClick.bind(this, regionsData[iso]));
+      this.regionName = regionsData[layer.feature.properties.iso_3166_2].name;
     };
 
     const resetHighlight = (e: any) => {
@@ -207,9 +205,9 @@ export class MapComponent implements OnInit {
       onEachFeature: onEachFeature,
     }).addTo(this.map);
   }
-  private onMapClick(e: any, id: any): void {
-    this.router.navigate(['/page', e.name], { replaceUrl: true });
-    /* const regionId = e.layer.feature.properties.iso_3166_2; // Отримуємо regionId з об'єкта, на який натиснуто
-    this.router.navigate(['/page', regionId]); */
+  private onMapClick(e: any): void {
+    this.router.navigate(['/page', this.regionName]);
+    // Оновлення історії перегляду браузера
+    /* this.location.go('/page', this.regionName); */
   }
 }
