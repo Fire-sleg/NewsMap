@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MapComponent } from './components/map/map.component';
+import { PageComponent } from './components/page/page.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent],
+  declarations: [AppComponent, MapComponent, PageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
