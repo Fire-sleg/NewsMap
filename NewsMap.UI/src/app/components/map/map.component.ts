@@ -66,6 +66,13 @@ export class MapComponent implements AfterViewInit {
 import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import * as topojson from 'topojson';
+import {
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-map',
@@ -79,7 +86,7 @@ export class MapComponent implements OnInit {
   initialCoordinates = [48.47, 31.39];
   initialScale = 6;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.loadJSON(this.regionsDataUri, (s: string) => {
@@ -117,7 +124,7 @@ export class MapComponent implements OnInit {
 
   addTileLayer(): void {
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-      id: 'shevchuk.i8eh460b',
+      id: 'myTile',
       maxZoom: 6.5,
       minZoom: 6.5,
     }).addTo(this.map);
@@ -146,6 +153,7 @@ export class MapComponent implements OnInit {
 
     const highlightFeature = (e: any) => {
       const layer = e.target;
+      const iso = e.target.feature.properties.iso_3166_2;
 
       layer.setStyle({
         weight: 2,
@@ -155,10 +163,36 @@ export class MapComponent implements OnInit {
       if (!L.Browser.ie && !L.Browser.opera) {
         layer.bringToFront();
       }
+      // Створення текстового елемента для SVG
+      const svgText = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'text'
+      );
+      svgText.setAttribute('x', '50'); // Задайте потрібні координати x
+      svgText.setAttribute('y', '50'); // Задайте потрібні координати y
+      svgText.setAttribute('font-family', 'Arial'); // Задайте шрифт
+      svgText.setAttribute('font-size', '16'); // Задайте розмір шрифту
+      svgText.setAttribute('fill', '#000'); // Задайте колір тексту
+      svgText.textContent = regionsData[iso].name;
+
+      // Отримайте ваш SVG-елемент (якщо у вас є id для SVG-контейнера, використайте document.getElementById)
+      const svgContainer = document.querySelector('svg');
+
+      // Додайте текстовий елемент до SVG-контейнера
+      svgContainer?.appendChild(svgText);
+      this.map.on('click', this.onMapClick.bind(this, regionsData[iso]));
     };
 
     const resetHighlight = (e: any) => {
       geojson.resetStyle(e.target);
+
+      // Отримати текстовий елемент для SVG
+      const svgText = document.querySelector('text');
+
+      // Видалити текстовий елемент з SVG-контейнера, якщо він присутній
+      if (svgText && svgText.parentNode) {
+        svgText.parentNode.removeChild(svgText);
+      }
     };
 
     const onEachFeature = (feature: any, layer: any) => {
@@ -172,5 +206,10 @@ export class MapComponent implements OnInit {
       style: style,
       onEachFeature: onEachFeature,
     }).addTo(this.map);
+  }
+  private onMapClick(e: any, id: any): void {
+    this.router.navigate(['/page', e.name], { replaceUrl: true });
+    /* const regionId = e.layer.feature.properties.iso_3166_2; // Отримуємо regionId з об'єкта, на який натиснуто
+    this.router.navigate(['/page', regionId]); */
   }
 }
