@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Jp5RrWNsR+Z5mBaJ9B7SAjKj9CYR8FuJefX9CdptfCb+ENG5tYHaHmz/8A7Fsdf+S6LGgleZF49CdyB5WekJ+Q==",
+  "dgSpecHash": "CE+DboToGrR09pSQZ6NaC5uFzcmoB9JaZ9wq2iQ+FdeqVnF61lJRDfvPXJWI58YAc+u8ggJxQMD4ksCIL+vqBQ==",
   "success": true,
   "projectFilePath": "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\fires\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\fires\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\fires\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\fires\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\6.5.0\\swashbuckle.aspnetcore.annotations.6.5.0.nupkg.sha512",
     "C:\\Users\\fires\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\fires\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\fires\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
