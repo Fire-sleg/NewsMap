@@ -178,9 +178,7 @@ export class MapComponent implements OnInit {
 
       // Додайте текстовий елемент до SVG-контейнера
       svgContainer?.appendChild(svgText);
-      //debugger;
       this.regionName = layer.feature.properties.iso_3166_2;
-      //regionsData[] /* .name */;
     };
 
     const resetHighlight = (e: any) => {

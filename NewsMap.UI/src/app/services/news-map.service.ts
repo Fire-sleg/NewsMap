@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NewsMap } from 'src/app/models/NewsMap';
+import { NewsMap, News } from 'src/app/models/NewsMap';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { HttpHeaders } from '@angular/common/http';
@@ -26,6 +26,11 @@ export class NewsMapService {
 
   public getNewsMap(): Observable<NewsMap> {
     return this.http.get<NewsMap>(
+      /* this.apiUrl */ `${environment.apiUrl}/${this.url}`
+    );
+  }
+  public getNews(): Observable<News> {
+    return this.http.get<News>(
       /* this.apiUrl */ `${environment.apiUrl}/${this.url}`
     );
   }
