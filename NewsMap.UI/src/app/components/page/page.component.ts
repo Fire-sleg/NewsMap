@@ -11,6 +11,7 @@ import { NewsMapService } from 'src/app/services/news-map.service';
 export class PageComponent implements OnInit {
   regionName = '';
   response: News[] = [];
+  dataLoaded: boolean = false;
 
   constructor(
     private newsMapService: NewsMapService,
@@ -26,7 +27,8 @@ export class PageComponent implements OnInit {
 
     this.newsMapService.postRegion(this.regionName).subscribe((response) => {
       this.newsMapService.getNews().subscribe((response) => {
-        this.response = response as News[]; 
+        this.response = response as News[];
+        this.dataLoaded = true;
       });
     });
   }

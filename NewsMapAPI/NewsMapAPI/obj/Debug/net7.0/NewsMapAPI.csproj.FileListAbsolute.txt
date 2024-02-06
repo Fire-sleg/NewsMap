@@ -67,3 +67,4 @@ E:\Coding\Websites\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\refint\NewsMap
 E:\Coding\Websites\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\NewsMapAPI.pdb
 E:\Coding\Websites\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\NewsMapAPI.genruntimeconfig.cache
 E:\Coding\Websites\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\ref\NewsMapAPI.dll
+D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\bin\Debug\net7.0\HtmlAgilityPack.dll
