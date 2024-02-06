@@ -171,14 +171,16 @@ export class MapComponent implements OnInit {
       svgText.setAttribute('font-size', '16'); // Задайте розмір шрифту
       svgText.setAttribute('fill', '#000'); // Задайте колір тексту
       svgText.textContent =
-        regionsData[layer.feature.properties.iso_3166_2].name;
+        regionsData[layer.feature.properties.iso_3166_2].name_ua;
 
       // Отримайте ваш SVG-елемент (якщо у вас є id для SVG-контейнера, використайте document.getElementById)
       const svgContainer = document.querySelector('svg');
 
       // Додайте текстовий елемент до SVG-контейнера
       svgContainer?.appendChild(svgText);
-      this.regionName = regionsData[layer.feature.properties.iso_3166_2].name;
+      //debugger;
+      this.regionName = layer.feature.properties.iso_3166_2;
+      //regionsData[] /* .name */;
     };
 
     const resetHighlight = (e: any) => {
