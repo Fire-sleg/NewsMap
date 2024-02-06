@@ -1,3 +1,5 @@
+using NewsMapAPI.WebScrapper.Cities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +14,9 @@ builder.Services.AddCors(options => options.AddPolicy("CorsPolicy",
         policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
     })
 );
+builder.Services.AddMemoryCache();
+builder.Services.AddSingleton<Dictionary<string, ICity>>(provider => InitDicCities());
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +30,15 @@ app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
+
+Dictionary<string, ICity> InitDicCities()
+{
+    Dictionary<string, ICity> pairs = new Dictionary<string, ICity>();
+
+    pairs.Add("UA-46", new Lviv());
+    pairs.Add("UA-61", new Ternopil());
+
+    return pairs;
+}
