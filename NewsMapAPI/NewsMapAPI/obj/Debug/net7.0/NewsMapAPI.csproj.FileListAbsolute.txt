@@ -31,3 +31,4 @@ D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\refint\NewsMapAPI.dll
 D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\NewsMapAPI.pdb
 D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\NewsMapAPI.genruntimeconfig.cache
 D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\obj\Debug\net7.0\ref\NewsMapAPI.dll
+D:\WebAPI\NewsMap\NewsMapAPI\NewsMapAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll
