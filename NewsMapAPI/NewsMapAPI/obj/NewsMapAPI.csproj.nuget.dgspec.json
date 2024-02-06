@@ -1,26 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj": {}
+    "E:\\Coding\\Websites\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj": {}
   },
   "projects": {
-    "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj": {
+    "E:\\Coding\\Websites\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj",
+        "projectUniqueName": "E:\\Coding\\Websites\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj",
         "projectName": "NewsMapAPI",
-        "projectPath": "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj",
-        "packagesPath": "C:\\Users\\fires\\.nuget\\packages\\",
-        "outputPath": "D:\\WebAPI\\NewsMap\\NewsMapAPI\\NewsMapAPI\\obj\\",
+        "projectPath": "E:\\Coding\\Websites\\NewsMap\\NewsMapAPI\\NewsMapAPI\\NewsMapAPI.csproj",
+        "packagesPath": "C:\\Users\\enstf\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\Websites\\NewsMap\\NewsMapAPI\\NewsMapAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Users\\fires\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fires\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\fires\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\enstf\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +40,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.11.58, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"
@@ -79,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

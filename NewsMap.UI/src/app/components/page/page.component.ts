@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsMap, News } from 'src/app/models/NewsMap';
 import { ActivatedRoute } from '@angular/router';
 import { NewsMapService } from 'src/app/services/news-map.service';
 
@@ -9,6 +10,7 @@ import { NewsMapService } from 'src/app/services/news-map.service';
 })
 export class PageComponent implements OnInit {
   regionName = '';
+  response: News[] = [];
 
   constructor(
     private newsMapService: NewsMapService,
@@ -23,7 +25,9 @@ export class PageComponent implements OnInit {
     });
 
     this.newsMapService.postRegion(this.regionName).subscribe((response) => {
-      // Обробка відповіді від сервера, якщо потрібно
+      this.newsMapService.getNews().subscribe((response) => {
+        this.response = response as News[]; 
+      });
     });
   }
 }

@@ -1,1 +1,7 @@
-<p style="font-size: 10em">page works!</p>
+<div *ngFor="let responseItem of response">
+    <p style="font-size: 4em">{{ responseItem.title }}</p>
+    <p style="font-size: 3em">{{ responseItem.date }}</p>
+    <p style="font-size: 3em">{{ responseItem.url }}</p>
+    <p style="font-size: 2em">{{ responseItem.content }}</p>
+  </div>
+  
