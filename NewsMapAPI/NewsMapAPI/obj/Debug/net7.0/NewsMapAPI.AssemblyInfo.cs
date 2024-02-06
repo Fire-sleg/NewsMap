@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewsMapAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cfdacb844a63b0758252cd4073ece4967880bc1f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewsMapAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewsMapAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
