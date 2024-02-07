@@ -8,4 +8,11 @@ export class News {
   date?: string;
   url?: string;
   content?: string;
+
+  constructor(title?: string, date?: string, url?: string, content?: string) {
+    this.title = title;
+    this.date = date;
+    this.url = url;
+    this.content = content;
+  }
 }

@@ -13,8 +13,8 @@ export class AppComponent {
   constructor(private newsMapService: NewsMapService) {}
 
   ngOnInit(): void {
-    this.newsMapService.getNewsMap().subscribe((result: NewsMap) => {
+    /* this.newsMapService.getNewsMap().subscribe((result: NewsMap) => {
       this.title = result.news as string;
-    });
+    }); */
   }
 }
