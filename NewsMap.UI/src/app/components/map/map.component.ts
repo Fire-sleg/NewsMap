@@ -140,10 +140,10 @@ export class MapComponent implements OnInit {
       const fillOpacity = region.grp / grpMax;
 
       return {
-        color: '#fff',
+        color: '#3343',
         opacity: 1,
         weight: 1,
-        fillColor: '#000',
+        fillColor: '#5678',
         fillOpacity: fillOpacity,
       };
     };

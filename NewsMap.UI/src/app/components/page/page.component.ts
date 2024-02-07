@@ -25,11 +25,30 @@ export class PageComponent implements OnInit {
       this.regionName = params['id'];
     });
 
-    this.newsMapService.postRegion(this.regionName).subscribe((response) => {
-      this.newsMapService.getNews().subscribe((response) => {
-        this.response = response as News[];
-        this.dataLoaded = true;
+    const storedObject = sessionStorage.getItem(this.regionName);
+    console.log(storedObject);
+    if (storedObject === null) {
+      this.newsMapService.postRegion(this.regionName).subscribe((response) => {
+        this.newsMapService.getNews().subscribe((response) => {
+          if (response !== undefined) {
+            this.response = response as News[];
+            this.dataLoaded = true;
+            sessionStorage.setItem(
+              this.regionName,
+              JSON.stringify(this.response)
+            );
+          }
+        });
       });
-    });
+    } else {
+      const newsFromStorage = sessionStorage.getItem(this.regionName);
+      if (newsFromStorage !== null) {
+        this.response = JSON.parse(newsFromStorage).map(
+          (item: any) => new News(item.title, item.date, item.url, item.content)
+        ) as News[];
+      }
+
+      this.dataLoaded = true;
+    }
   }
 }

@@ -7,11 +7,13 @@
   </div>
 </div>
 
-<div *ngIf="dataLoaded">
-  <div *ngFor="let responseItem of response">
+<div *ngIf="dataLoaded" style="width: 95%">
+  <div *ngFor="let responseItem of response" class="news-conteiner">
     <p style="font-size: 4em">{{ responseItem.title }}</p>
     <p style="font-size: 3em">{{ responseItem.date }}</p>
-    <p style="font-size: 3em">{{ responseItem.url }}</p>
-    <p style="font-size: 2em">{{ responseItem.content }}</p>
+    <a style="font-size: 1em" href="{{ responseItem.url }}">посилання</a>
+    <p style="font-size: 2em; text-align: justify">
+      {{ responseItem.content }}
+    </p>
   </div>
 </div>
